@@ -1,0 +1,23 @@
+name: Mise a jour quotidienne des donnees vin
+on:
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  collecte:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python collect.py
+      - run: |
+          git config user.name "taste-robot"
+          git config user.email "robot@taste.app"
+          git add trends.json
+          git commit -m "MAJ interet vin du jour" || echo "rien a committer"
+          git push
