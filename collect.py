@@ -1,11 +1,26 @@
 #!/usr/bin/env python3
-"""Robot de collecte — WrapWines (par PAYS). Interet de recherche Google Trends."""
+"""
+Robot de collecte — TASTE / Indice mondial des goûts du vin (par PAYS).
+
+Récupère l'INTÉRÊT DE RECHERCHE (Google Trends) pour un panier de vins,
+pays par pays, et écrit data/trends.json que l'appli lit.
+
+Ce que ça mesure : l'intérêt de recherche relatif (0-100), PAS la consommation.
+Si un pays n'a pas assez de volume, on écrit une liste vide plutôt que d'inventer.
+
+NOTE : pytrends interroge un point d'accès non officiel de Google ; il peut
+renvoyer des erreurs 429. Le script gère pauses et reprises. La Chine (CN) est
+souvent vide (Google bloqué) — c'est normal et affiché honnêtement.
+"""
 
 import json
 import time
 import datetime as dt
 from pathlib import Path
 
+from pytrends.request import TrendReq
+
+# Panier de vins suivis (terme de recherche -> libellé affiché)
 KEYWORDS = [
     ("champagne", "Champagne"),
     ("prosecco", "Prosecco"),
@@ -24,6 +39,7 @@ KEYWORDS = [
 ]
 ANCHOR = ("champagne", "Champagne")
 
+# 20 pays principaux (slug -> code pays ISO pour Google Trends)
 COUNTRIES = {
     "france": "FR", "italie": "IT", "espagne": "ES", "usa": "US",
     "royaumeuni": "GB", "allemagne": "DE", "portugal": "PT", "autriche": "AT",
@@ -32,25 +48,18 @@ COUNTRIES = {
     "bresil": "BR", "paysbas": "NL", "suisse": "CH", "coreedusud": "KR",
 }
 
-TIMEFRAME = "today 1-m"
+TIMEFRAME = "today 1-m"   # fenêtre 1 mois (plus stable au niveau pays)
 PAUSE = 2.0
 MAX_RETRIES = 4
 
-
-def make_pytrends():
-    try:
-        from pytrends.request import TrendReq
-        return TrendReq(hl="fr-FR", tz=60, timeout=(10, 25))
-    except Exception as e:
-        print(f"!! Init Google Trends impossible : {e}")
-        return None
+pytrends = TrendReq(hl="fr-FR", tz=60, timeout=(10, 25))
 
 
-def fetch_batch(pt, keywords, geo):
+def fetch_batch(keywords, geo):
     for attempt in range(MAX_RETRIES):
         try:
-            pt.build_payload([k for k, _ in keywords], timeframe=TIMEFRAME, geo=geo)
-            df = pt.interest_over_time()
+            pytrends.build_payload([k for k, _ in keywords], timeframe=TIMEFRAME, geo=geo)
+            df = pytrends.interest_over_time()
             if df is None or df.empty:
                 return {}
             if "isPartial" in df.columns:
@@ -58,17 +67,17 @@ def fetch_batch(pt, keywords, geo):
             return {k: float(df[k].mean()) for k, _ in keywords if k in df.columns}
         except Exception as e:
             wait = PAUSE * (2 ** attempt)
-            print(f"    ! tentative {attempt+1} echouee ({e}); pause {wait:.0f}s")
+            print(f"    ! tentative {attempt+1} échouée ({e}); pause {wait:.0f}s")
             time.sleep(wait)
     return {}
 
 
-def collect_country(pt, geo):
+def collect_country(geo):
     others = [kw for kw in KEYWORDS if kw[0] != ANCHOR[0]]
     scores, anchor_ref = {}, None
     for i in range(0, len(others), 4):
         batch = [ANCHOR] + others[i:i + 4]
-        means = fetch_batch(pt, batch, geo)
+        means = fetch_batch(batch, geo)
         time.sleep(PAUSE)
         if not means or means.get(ANCHOR[0], 0) <= 0:
             continue
@@ -93,7 +102,6 @@ def to_top(scores, n=5):
 
 
 def main():
-    pt = make_pytrends()
     out = {
         "updated": dt.date.today().isoformat(),
         "source": "Google Trends",
@@ -102,20 +110,17 @@ def main():
     }
     for slug, geo in COUNTRIES.items():
         print(f"- {slug} ({geo})")
-        top = []
-        if pt is not None:
-            try:
-                top = to_top(collect_country(pt, geo))
-            except Exception as e:
-                print(f"    erreur {slug} : {e}")
+        top = to_top(collect_country(geo))
         out["countries"][slug] = {"granularity": "pays", "top": top}
-        print(f"    {'ok' if top else 'donnees insuffisantes'}")
+        print(f"    {'ok : ' + top[0][0] + ' en tête' if top else 'données insuffisantes'}")
         time.sleep(PAUSE)
 
     out_path = Path(__file__).resolve().parent / "trends.json"
-    out_path.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+    out_path.write_text(
+        json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
     n = sum(1 for c in out["countries"].values() if c["top"])
-    print(f"\nEcrit trends.json — {n}/{len(COUNTRIES)} pays avec donnees.")
+    print(f"\nÉcrit data/trends.json — {n}/{len(COUNTRIES)} pays avec données.")
 
 
 if __name__ == "__main__":

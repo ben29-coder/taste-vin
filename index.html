@@ -75,7 +75,8 @@ function renderView(){
   let badge, items;
   if(r&&r.top&&r.top.length){items=r.top;badge=`<div class="rbadge real">● Données réelles · Google Trends · ${TRENDS.updated||''}</div>`;}
   else{items=d.top;badge="";}
-  const max=items[0][1]||100;
+  items=items.filter(t=>String(t[0]).toLowerCase()!=='champagne').slice(0,5);
+  const max=(items[0]&&items[0][1])||100;
   const list=items.map((t,i)=>`<li><span class="rank">${i+1}</span><span class="wname">${t[0]}</span><span class="ltrack"><span class="lfill" style="width:${Math.max(6,Math.round(t[1]/max*100))}%"></span></span><span class="pct">${t[1]}</span></li>`).join("");
   document.getElementById("view").innerHTML=`<div class="card">
     <div class="city-name">${d.flag} ${d.name}</div>
