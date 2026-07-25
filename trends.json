@@ -1,232 +1,43 @@
 {
-  "updated": "2026-07-24",
+  "updated": "2026-07-25",
   "source": "Google Trends",
   "measure": "interet_de_recherche",
   "countries": {
     "france": {
       "granularity": "pays",
-      "top": [
-        [
-          "Champagne",
-          100
-        ],
-        [
-          "Bourgogne",
-          45
-        ],
-        [
-          "Pinot Noir",
-          2
-        ],
-        [
-          "Sauvignon Blanc",
-          1
-        ],
-        [
-          "Bordeaux",
-          1
-        ]
-      ]
+      "top": []
     },
     "italie": {
       "granularity": "pays",
-      "top": [
-        [
-          "Champagne",
-          100
-        ],
-        [
-          "Prosecco",
-          68
-        ],
-        [
-          "Chianti",
-          63
-        ],
-        [
-          "Barolo",
-          28
-        ],
-        [
-          "Chardonnay",
-          13
-        ]
-      ]
+      "top": []
     },
     "espagne": {
       "granularity": "pays",
-      "top": [
-        [
-          "Rioja",
-          100
-        ],
-        [
-          "Champagne",
-          14
-        ],
-        [
-          "Prosecco",
-          2
-        ],
-        [
-          "Chardonnay",
-          2
-        ],
-        [
-          "Malbec",
-          2
-        ]
-      ]
+      "top": []
     },
     "usa": {
       "granularity": "pays",
-      "top": [
-        [
-          "Champagne",
-          100
-        ],
-        [
-          "Chardonnay",
-          21
-        ],
-        [
-          "Prosecco",
-          21
-        ],
-        [
-          "Merlot",
-          11
-        ],
-        [
-          "Chianti",
-          7
-        ]
-      ]
+      "top": []
     },
     "royaumeuni": {
       "granularity": "pays",
-      "top": [
-        [
-          "Champagne",
-          100
-        ],
-        [
-          "Prosecco",
-          42
-        ],
-        [
-          "Sauvignon Blanc",
-          15
-        ],
-        [
-          "Chardonnay",
-          10
-        ],
-        [
-          "Rioja",
-          10
-        ]
-      ]
+      "top": []
     },
     "allemagne": {
       "granularity": "pays",
-      "top": [
-        [
-          "Champagne",
-          100
-        ],
-        [
-          "Prosecco",
-          90
-        ],
-        [
-          "Riesling",
-          64
-        ],
-        [
-          "Chardonnay",
-          42
-        ],
-        [
-          "Sauvignon Blanc",
-          28
-        ]
-      ]
+      "top": []
     },
     "portugal": {
       "granularity": "pays",
-      "top": [
-        [
-          "Champagne",
-          100
-        ],
-        [
-          "Prosecco",
-          11
-        ],
-        [
-          "Chardonnay",
-          9
-        ],
-        [
-          "Malbec",
-          8
-        ],
-        [
-          "Rioja",
-          7
-        ]
-      ]
+      "top": []
     },
     "autriche": {
       "granularity": "pays",
-      "top": [
-        [
-          "Champagne",
-          100
-        ],
-        [
-          "Sauvignon Blanc",
-          26
-        ],
-        [
-          "Pinot Noir",
-          19
-        ],
-        [
-          "Cabernet Sauvignon",
-          8
-        ],
-        [
-          "Bourgogne",
-          6
-        ]
-      ]
+      "top": []
     },
     "argentine": {
       "granularity": "pays",
-      "top": [
-        [
-          "Malbec",
-          100
-        ],
-        [
-          "Champagne",
-          40
-        ],
-        [
-          "Chardonnay",
-          3
-        ],
-        [
-          "Merlot",
-          2
-        ],
-        [
-          "Riesling",
-          1
-        ]
-      ]
+      "top": []
     },
     "chili": {
       "granularity": "pays",
@@ -237,71 +48,29 @@
         ],
         [
           "Cabernet Sauvignon",
-          51
+          66
         ],
         [
           "Merlot",
-          49
+          41
         ],
         [
           "Malbec",
-          24
+          23
         ],
         [
-          "Rioja",
-          19
+          "Chardonnay",
+          17
         ]
       ]
     },
     "australie": {
       "granularity": "pays",
-      "top": [
-        [
-          "Champagne",
-          100
-        ],
-        [
-          "Prosecco",
-          26
-        ],
-        [
-          "Chianti",
-          6
-        ],
-        [
-          "Barolo",
-          2
-        ],
-        [
-          "Rioja",
-          1
-        ]
-      ]
+      "top": []
     },
     "nouvellezelande": {
       "granularity": "pays",
-      "top": [
-        [
-          "Champagne",
-          100
-        ],
-        [
-          "Pinot Noir",
-          70
-        ],
-        [
-          "Chardonnay",
-          31
-        ],
-        [
-          "Sauvignon Blanc",
-          20
-        ],
-        [
-          "Prosecco",
-          15
-        ]
-      ]
+      "top": []
     },
     "afriquedusud": {
       "granularity": "pays",
@@ -311,197 +80,50 @@
           100
         ],
         [
-          "Merlot",
-          14
-        ],
-        [
-          "Chardonnay",
-          9
-        ],
-        [
           "Sauvignon Blanc",
-          8
+          6
         ],
         [
           "Cabernet Sauvignon",
-          7
+          5
+        ],
+        [
+          "Pinot Noir",
+          3
+        ],
+        [
+          "Bordeaux",
+          0
         ]
       ]
     },
     "japon": {
       "granularity": "pays",
-      "top": [
-        [
-          "Champagne",
-          100
-        ],
-        [
-          "Chardonnay",
-          23
-        ],
-        [
-          "Pinot Noir",
-          16
-        ],
-        [
-          "Bourgogne",
-          11
-        ],
-        [
-          "Cabernet Sauvignon",
-          10
-        ]
-      ]
+      "top": []
     },
     "belgique": {
       "granularity": "pays",
-      "top": [
-        [
-          "Champagne",
-          100
-        ],
-        [
-          "Bourgogne",
-          27
-        ],
-        [
-          "Prosecco",
-          11
-        ],
-        [
-          "Chardonnay",
-          10
-        ],
-        [
-          "Chianti",
-          4
-        ]
-      ]
+      "top": []
     },
     "canada": {
       "granularity": "pays",
-      "top": [
-        [
-          "Champagne",
-          100
-        ],
-        [
-          "Prosecco",
-          23
-        ],
-        [
-          "Chardonnay",
-          18
-        ],
-        [
-          "Cabernet Sauvignon",
-          15
-        ],
-        [
-          "Sauvignon Blanc",
-          13
-        ]
-      ]
+      "top": []
     },
     "bresil": {
       "granularity": "pays",
-      "top": [
-        [
-          "Malbec",
-          100
-        ],
-        [
-          "Champagne",
-          24
-        ],
-        [
-          "Cabernet Sauvignon",
-          16
-        ],
-        [
-          "Merlot",
-          13
-        ],
-        [
-          "Chardonnay",
-          9
-        ]
-      ]
+      "top": []
     },
     "paysbas": {
       "granularity": "pays",
-      "top": [
-        [
-          "Champagne",
-          100
-        ],
-        [
-          "Chardonnay",
-          32
-        ],
-        [
-          "Prosecco",
-          24
-        ],
-        [
-          "Bourgogne",
-          20
-        ],
-        [
-          "Rioja",
-          16
-        ]
-      ]
+      "top": []
     },
     "suisse": {
       "granularity": "pays",
-      "top": [
-        [
-          "Champagne",
-          100
-        ],
-        [
-          "Prosecco",
-          51
-        ],
-        [
-          "Bourgogne",
-          16
-        ],
-        [
-          "Merlot",
-          12
-        ],
-        [
-          "Chardonnay",
-          11
-        ]
-      ]
+      "top": []
     },
     "coreedusud": {
       "granularity": "pays",
-      "top": [
-        [
-          "Champagne",
-          100
-        ],
-        [
-          "Chardonnay",
-          31
-        ],
-        [
-          "Cabernet Sauvignon",
-          23
-        ],
-        [
-          "Pinot Noir",
-          10
-        ],
-        [
-          "Bourgogne",
-          8
-        ]
-      ]
+      "top": []
     }
   }
 }
