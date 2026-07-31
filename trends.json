@@ -1,11 +1,20 @@
 {
-  "updated": "2026-07-30",
+  "updated": "2026-07-31",
   "source": "Google Trends",
   "measure": "interet_de_recherche",
   "countries": {
     "france": {
       "granularity": "pays",
-      "top": []
+      "top": [
+        [
+          "Champagne",
+          100
+        ],
+        [
+          "Bourgogne",
+          46
+        ]
+      ]
     },
     "italie": {
       "granularity": "pays",
@@ -41,15 +50,78 @@
     },
     "chili": {
       "granularity": "pays",
-      "top": []
+      "top": [
+        [
+          "Champagne",
+          100
+        ],
+        [
+          "Cabernet Sauvignon",
+          39
+        ],
+        [
+          "Sauvignon Blanc",
+          14
+        ],
+        [
+          "Pinot Noir",
+          12
+        ],
+        [
+          "Bourgogne",
+          3
+        ]
+      ]
     },
     "australie": {
       "granularity": "pays",
-      "top": []
+      "top": [
+        [
+          "Champagne",
+          100
+        ],
+        [
+          "Pinot Noir",
+          52
+        ],
+        [
+          "Prosecco",
+          27
+        ],
+        [
+          "Cabernet Sauvignon",
+          22
+        ],
+        [
+          "Sauvignon Blanc",
+          19
+        ]
+      ]
     },
     "nouvellezelande": {
       "granularity": "pays",
-      "top": []
+      "top": [
+        [
+          "Champagne",
+          100
+        ],
+        [
+          "Merlot",
+          24
+        ],
+        [
+          "Chardonnay",
+          24
+        ],
+        [
+          "Prosecco",
+          16
+        ],
+        [
+          "Riesling",
+          6
+        ]
+      ]
     },
     "afriquedusud": {
       "granularity": "pays",
@@ -81,28 +153,7 @@
     },
     "coreedusud": {
       "granularity": "pays",
-      "top": [
-        [
-          "Champagne",
-          100
-        ],
-        [
-          "Barolo",
-          4
-        ],
-        [
-          "Prosecco",
-          1
-        ],
-        [
-          "Rioja",
-          1
-        ],
-        [
-          "Chianti",
-          1
-        ]
-      ]
+      "top": []
     }
   }
 }
