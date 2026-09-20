@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-19",
+  "updated": "2026-09-20",
   "source": "Google Trends",
   "measure": "interet_de_recherche",
   "countries": {
@@ -41,11 +41,11 @@
         ],
         [
           "Prosecco",
-          79
+          77
         ],
         [
           "Barolo",
-          43
+          44
         ],
         [
           "Chardonnay",
@@ -62,7 +62,7 @@
         ],
         [
           "Champagne",
-          12
+          13
         ],
         [
           "Prosecco",
@@ -73,7 +73,7 @@
           1
         ],
         [
-          "Malbec",
+          "Sauvignon Blanc",
           1
         ]
       ]
@@ -91,7 +91,7 @@
         ],
         [
           "Chardonnay",
-          21
+          22
         ],
         [
           "Pinot Noir",
@@ -120,7 +120,7 @@
         ],
         [
           "Rioja",
-          12
+          11
         ],
         [
           "Chardonnay",
@@ -137,18 +137,18 @@
         ],
         [
           "Prosecco",
-          59
+          58
         ],
         [
           "Riesling",
-          54
+          53
         ],
         [
           "Chardonnay",
-          31
+          32
         ],
         [
-          "Merlot",
+          "Sauvignon Blanc",
           20
         ]
       ]
@@ -161,19 +161,19 @@
           100
         ],
         [
+          "Rioja",
+          9
+        ],
+        [
           "Malbec",
-          8
-        ],
-        [
-          "Prosecco",
-          8
-        ],
-        [
-          "Chardonnay",
           7
         ],
         [
-          "Rioja",
+          "Prosecco",
+          7
+        ],
+        [
+          "Merlot",
           7
         ]
       ]
@@ -187,19 +187,19 @@
         ],
         [
           "Champagne",
-          35
-        ],
-        [
-          "Sauvignon Blanc",
-          12
-        ],
-        [
-          "Chardonnay",
-          11
+          31
         ],
         [
           "Riesling",
-          11
+          14
+        ],
+        [
+          "Chardonnay",
+          9
+        ],
+        [
+          "Barolo",
+          9
         ]
       ]
     },
@@ -237,19 +237,19 @@
         ],
         [
           "Cabernet Sauvignon",
-          85
+          82
         ],
         [
           "Merlot",
-          69
+          71
         ],
         [
           "Malbec",
-          30
+          28
         ],
         [
           "Chardonnay",
-          21
+          19
         ]
       ]
     },
@@ -262,19 +262,19 @@
         ],
         [
           "Pinot Noir",
-          42
+          41
         ],
         [
           "Chardonnay",
-          36
+          37
         ],
         [
           "Prosecco",
-          29
+          30
         ],
         [
           "Sauvignon Blanc",
-          18
+          19
         ]
       ]
     },
@@ -287,19 +287,19 @@
         ],
         [
           "Pinot Noir",
-          75
+          70
         ],
         [
           "Chardonnay",
-          26
-        ],
-        [
-          "Prosecco",
-          24
+          31
         ],
         [
           "Sauvignon Blanc",
-          23
+          27
+        ],
+        [
+          "Prosecco",
+          18
         ]
       ]
     },
@@ -311,20 +311,20 @@
           100
         ],
         [
-          "Chardonnay",
+          "Merlot",
           10
         ],
         [
-          "Merlot",
-          9
+          "Sauvignon Blanc",
+          10
         ],
         [
-          "Sauvignon Blanc",
+          "Chardonnay",
           8
         ],
         [
           "Cabernet Sauvignon",
-          4
+          5
         ]
       ]
     },
@@ -336,20 +336,20 @@
           100
         ],
         [
-          "Chianti",
+          "Chardonnay",
           14
         ],
         [
-          "Chardonnay",
+          "Chianti",
           13
+        ],
+        [
+          "Cabernet Sauvignon",
+          11
         ],
         [
           "Pinot Noir",
           10
-        ],
-        [
-          "Bourgogne",
-          9
         ]
       ]
     },
@@ -362,7 +362,7 @@
         ],
         [
           "Bourgogne",
-          20
+          21
         ],
         [
           "Chardonnay",
@@ -370,7 +370,7 @@
         ],
         [
           "Prosecco",
-          6
+          8
         ],
         [
           "Barolo",
@@ -387,11 +387,11 @@
         ],
         [
           "Prosecco",
-          20
+          19
         ],
         [
           "Bourgogne",
-          17
+          18
         ],
         [
           "Chardonnay",
@@ -399,7 +399,7 @@
         ],
         [
           "Cabernet Sauvignon",
-          15
+          16
         ]
       ]
     },
@@ -412,15 +412,15 @@
         ],
         [
           "Champagne",
-          26
+          27
         ],
         [
           "Cabernet Sauvignon",
-          16
+          17
         ],
         [
           "Merlot",
-          12
+          13
         ],
         [
           "Chardonnay",
@@ -437,7 +437,7 @@
         ],
         [
           "Chardonnay",
-          26
+          25
         ],
         [
           "Prosecco",
@@ -462,19 +462,19 @@
         ],
         [
           "Prosecco",
-          37
+          35
         ],
         [
           "Bourgogne",
-          21
+          22
         ],
         [
-          "Pinot Noir",
+          "Barolo",
           14
         ],
         [
           "Merlot",
-          10
+          12
         ]
       ]
     },
@@ -486,20 +486,20 @@
           100
         ],
         [
-          "Chardonnay",
-          40
+          "Merlot",
+          27
         ],
         [
           "Cabernet Sauvignon",
-          22
+          25
         ],
         [
-          "Merlot",
-          20
+          "Chardonnay",
+          18
         ],
         [
           "Pinot Noir",
-          16
+          18
         ]
       ]
     }
